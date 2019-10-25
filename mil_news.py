@@ -43,7 +43,7 @@ def flatten_data(lst):
     return res_dct
 
 def news_parsing():
-    url = "https://www.militarynews.ru/default.asp?pid=0&rid=1&lang=RU"
+    url = milglobal.newssource
     p = MyHTMLParser()
     html = u.urlopen(url).read().decode('cp1251')
     p.feed(html)
