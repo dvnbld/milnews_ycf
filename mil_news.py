@@ -56,7 +56,7 @@ def news_parsing():
     p.close()
 
 def send_emails(msg):
-    server = smtplib.SMTP_SSL('smtp.yandex.com:465')
+    server = smtplib.SMTP_SSL(milglobal.sender_serv)
     server.ehlo()
     server.login(milglobal.sender_mail, milglobal.sender_pass)
     message = 'Subject: militarynews interfax рассылка {} \n\n{}'.format(date_today(),msg).encode('cp1251')
